@@ -35,3 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+#### yml ###
+##application-db_lcoal.yml
+##application-db_prod.yml
+

@@ -1,0 +1,57 @@
+spring:
+  profiles:
+    active : local
+    group:
+      local: db_local
+      prod: db_prod
+  jpa:
+    properties:
+      hibernate:
+        default_batch_fetch_size: 1000
+    show-sql: false
+
+  thymeleaf:
+    cache: false
+  output:
+    ansi:
+      enabled: always
+
+logging:
+  file:
+    path : ./logs/
+    max-size: 500MB
+    max-history: 10
+  level:
+    root: info
+    han.itemBox.aop: debug
+
+--- # local
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.MariaDBDialect
+  config:
+    activate:
+      on-profile: local # ??????
+server:
+  port: 7080
+  error:
+    include-exception: true # ?? ??? exception? ??? ???? ??
+    include-stacktrace: always # ?? ??? stacktrace ??? ??? ? ??
+
+--- # prod
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none # ?? ?? ???
+      dialect: org.hibernate.dialect.MariaDBDialect
+  config:
+    activate:
+      on-profile: prod # ??????
+server:
+  port: 8080
+  error:
+    include-exception: true # ?? ??? exception? ??? ???? ??
+    include-stacktrace: always # ?? ??? stacktrace ??? ??? ? ??
+
