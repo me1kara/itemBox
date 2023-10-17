@@ -28,9 +28,9 @@ logging:
 --- # local
 spring:
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: none
-      dialect: org.hibernate.dialect.MariaDBDialect
   config:
     activate:
       on-profile: local # ??????

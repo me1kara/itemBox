@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html
+  lang="ko"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+  <!-- layout:decorate="fragment/_layout" -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>타이틀</title>
+
+    <style>
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+        color: var(--black-default);
+        font-style: normal;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        letter-spacing: -0.4px;
+      }
+      body {
+        background: #ece8e2;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .mainLogo-wrap {
+        padding-left: 20px;
+        padding-top: 20px;
+      }
+      .index-title {
+        display: flex;
+        margin: 0px auto;
+        width: 622px;
+        position: relative;
+      }
+      .index-title h4 {
+        width: 274px;
+        height: 60px;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 60px;
+        text-align: center;
+      }
+      .index-info {
+        width: 786px;
+        margin: 24px auto 0px auto;
+      }
+      .items-wrap > p {
+        font-weight: 700;
+        font-size: 16px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        padding: 4px;
+      }
+
+      .item-cate > span:first-of-type {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+        vertical-align: -5%;
+        border: 1px solid black;
+      }
+      .items {
+        width: 670px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+      .items > li {
+        width: 80px;
+        height: 82px;
+        border-right: 2px solid black;
+      }
+      .item-none:after {
+        position: absolute;
+        content: "";
+        border-top: 2px solid black;
+        width: 100px;
+        transform: translateX(76px) rotate(135deg);
+        transform-origin: 0% 0%;
+        margin-top: 7px;
+      }
+      .item span {
+        font-size: 12px;
+      }
+      footer {
+        text-align: center;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div layout:fragment="content"> -->
+    <div class="container">
+      <!--헤더부분-->
+      <header>
+        <div class="mainLogo-wrap">
+          <img
+            src="../static/img/logo/itembox-logo.png"
+            alt=""
+            class="mainLogo"
+            width="80px"
+            height="80px"
+          />
+        </div>
+      </header>
+      <main>
+        <section class="index-title">
+          <h4><strong>아이템박스!</strong></h4>
+        </section>
+        <section class="index-info">
+          <article class="items-wrap">
+            <p class="item-cate"><span></span><span>맵</span></p>
+            <ul class="items">
+              <li class="item">
+                <a href="">
+                  <img src="" alt="" alt="api-image" />
+                  <span>api이름</span>
+                </a>
+              </li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+            </ul>
+          </article>
+          <article class="items-wrap">
+            <p class="item-cate"><span></span><span>AI</span></p>
+            <ul class="items">
+              <li class="item">
+                <a href="">
+                  <img src="" alt="" alt="api-image" />
+                  <span>api이름</span>
+                </a>
+              </li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+            </ul>
+          </article>
+          <article class="items-wrap">
+            <p class="item-cate"><span></span><span>DATA</span></p>
+            <ul class="items">
+              <li class="item">
+                <a href="">
+                  <img src="" alt="" alt="api-image" />
+                  <span>api이름</span>
+                </a>
+              </li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+            </ul>
+          </article>
+          <article class="items-wrap">
+            <p class="item-cate"><span></span><span>커뮤니티</span></p>
+            <ul class="items">
+              <li class="item">
+                <a href="">
+                  <img src="" alt="" alt="api-image" />
+                  <span>api이름</span>
+                </a>
+              </li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+              <li class="item-none"></li>
+            </ul>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>아이템박스는 유용하고 흥미로운 api들을 소개합니다!</p>
+        <p>© 2023 itembox.com</p>
+      </footer>
+    </div>
+  </body>
+</html>
