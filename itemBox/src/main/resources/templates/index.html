@@ -19,29 +19,10 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
     <title>타이틀</title>
 
     <style>
-      * {
-        font-family: "Noto Sans KR", sans-serif;
-        color: var(--black-default);
-        font-style: normal;
-        margin: 0px;
-        padding: 0px;
-        border: none;
-        outline: none;
-        box-sizing: border-box;
-        letter-spacing: -0.4px;
-      }
-      body {
-        background: #ece8e2;
-      }
-      li {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-      }
       .mainLogo-wrap {
         padding-left: 20px;
         padding-top: 20px;
@@ -117,7 +98,7 @@
       <header>
         <div class="mainLogo-wrap">
           <img
-            src="../static/img/logo/itembox-logo.png"
+            th:src="@{/img/logo/itembox-logo.png}"
             alt=""
             class="mainLogo"
             width="80px"
@@ -135,7 +116,7 @@
             <ul class="items">
               <li class="item">
                 <a href="">
-                  <img src="" alt="" alt="api-image" />
+                  <img src="" alt="api-image" />
                   <span>api이름</span>
                 </a>
               </li>
@@ -152,7 +133,7 @@
             <ul class="items">
               <li class="item">
                 <a href="">
-                  <img src="" alt="" alt="api-image" />
+                  <img src="" alt="api-image" />
                   <span>api이름</span>
                 </a>
               </li>
@@ -169,7 +150,7 @@
             <ul class="items">
               <li class="item">
                 <a href="">
-                  <img src="" alt="" alt="api-image" />
+                  <img src="" alt="api-image" />
                   <span>api이름</span>
                 </a>
               </li>
@@ -182,12 +163,12 @@
             </ul>
           </article>
           <article class="items-wrap">
-            <p class="item-cate"><span></span><span>커뮤니티</span></p>
+            <p class="item-cate"><span></span><span>유희거리</span></p>
             <ul class="items">
               <li class="item">
-                <a href="">
-                  <img src="" alt="" alt="api-image" />
-                  <span>api이름</span>
+                <a th:href="@{/quotes/random}">
+                  <img src="" alt="api-image" />
+                  <span>랜덤명언</span>
                 </a>
               </li>
               <li class="item-none"></li>

@@ -1,0 +1,367 @@
+2023-10-20T14:45:43.421+09:00  INFO 14788 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 14788 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T14:45:43.423+09:00  INFO 14788 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T14:45:43.478+09:00  INFO 14788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T14:45:43.478+09:00  INFO 14788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T14:45:44.156+09:00  INFO 14788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T14:45:44.221+09:00  INFO 14788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+2023-10-20T14:45:45.085+09:00  INFO 14788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T14:45:45.087+09:00  INFO 14788 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T14:45:45.087+09:00  INFO 14788 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T14:45:45.089+09:00  INFO 14788 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T14:45:45.100+09:00  INFO 14788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T14:45:45.100+09:00  INFO 14788 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T14:45:45.173+09:00  INFO 14788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T14:45:45.173+09:00  INFO 14788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1693 ms
+2023-10-20T14:45:45.210+09:00  INFO 14788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T14:45:45.298+09:00  INFO 14788 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T14:45:45.300+09:00  INFO 14788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T14:45:45.311+09:00  INFO 14788 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T14:45:45.461+09:00  INFO 14788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T14:45:45.537+09:00  INFO 14788 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T14:45:45.540+09:00  INFO 14788 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T14:45:45.713+09:00  INFO 14788 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:45:45.854+09:00  INFO 14788 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T14:45:46.093+09:00  INFO 14788 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:45:46.646+09:00  INFO 14788 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T14:45:46.649+09:00  INFO 14788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T14:45:46.948+09:00  WARN 14788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T14:45:47.093+09:00  INFO 14788 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T14:45:47.317+09:00  INFO 14788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T14:45:47.352+09:00  INFO 14788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T14:45:47.361+09:00  INFO 14788 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.454 seconds (process running for 4.918)
+2023-10-20T14:51:35.433+09:00  INFO 14788 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T14:51:35.433+09:00  INFO 14788 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T14:51:35.433+09:00  INFO 14788 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-10-20T14:52:45.377+09:00  INFO 6612 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 6612 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T14:52:45.379+09:00  INFO 6612 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T14:52:45.435+09:00  INFO 6612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T14:52:45.435+09:00  INFO 6612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T14:52:46.115+09:00  INFO 6612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T14:52:46.183+09:00  INFO 6612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+2023-10-20T14:52:47.126+09:00  INFO 6612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T14:52:47.127+09:00  INFO 6612 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T14:52:47.127+09:00  INFO 6612 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T14:52:47.129+09:00  INFO 6612 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T14:52:47.141+09:00  INFO 6612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T14:52:47.141+09:00  INFO 6612 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T14:52:47.222+09:00  INFO 6612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T14:52:47.223+09:00  INFO 6612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1786 ms
+2023-10-20T14:52:47.258+09:00  INFO 6612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T14:52:47.364+09:00  INFO 6612 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T14:52:47.367+09:00  INFO 6612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T14:52:47.382+09:00  INFO 6612 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T14:52:47.569+09:00  INFO 6612 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T14:52:47.654+09:00  INFO 6612 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T14:52:47.658+09:00  INFO 6612 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T14:52:47.857+09:00  INFO 6612 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:52:48.064+09:00  INFO 6612 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T14:52:48.350+09:00  INFO 6612 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:52:48.933+09:00  INFO 6612 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T14:52:48.936+09:00  INFO 6612 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T14:52:49.263+09:00  WARN 6612 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T14:52:49.413+09:00  INFO 6612 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T14:52:49.655+09:00  INFO 6612 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T14:52:49.704+09:00  INFO 6612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T14:52:49.716+09:00  INFO 6612 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.929 seconds (process running for 5.394)
+2023-10-20T14:53:07.306+09:00  INFO 3488 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 3488 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T14:53:07.309+09:00  INFO 3488 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T14:53:07.356+09:00  INFO 3488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T14:53:07.356+09:00  INFO 3488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T14:53:08.010+09:00  INFO 3488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T14:53:08.074+09:00  INFO 3488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
+2023-10-20T14:53:08.890+09:00  INFO 3488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T14:53:08.891+09:00  INFO 3488 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T14:53:08.891+09:00  INFO 3488 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T14:53:08.894+09:00  INFO 3488 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T14:53:08.904+09:00  INFO 3488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T14:53:08.904+09:00  INFO 3488 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T14:53:08.973+09:00  INFO 3488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T14:53:08.974+09:00  INFO 3488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1617 ms
+2023-10-20T14:53:08.999+09:00  INFO 3488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T14:53:09.083+09:00  INFO 3488 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T14:53:09.085+09:00  INFO 3488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T14:53:09.095+09:00  INFO 3488 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T14:53:09.247+09:00  INFO 3488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T14:53:09.309+09:00  INFO 3488 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T14:53:09.312+09:00  INFO 3488 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T14:53:09.468+09:00  INFO 3488 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:53:09.600+09:00  INFO 3488 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T14:53:09.836+09:00  INFO 3488 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:53:10.344+09:00  INFO 3488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T14:53:10.347+09:00  INFO 3488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T14:53:10.655+09:00  WARN 3488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T14:53:10.794+09:00  INFO 3488 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T14:53:11.018+09:00  INFO 3488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T14:53:11.055+09:00  INFO 3488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T14:53:11.065+09:00  INFO 3488 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.253 seconds (process running for 4.718)
+2023-10-20T14:54:27.416+09:00  INFO 21244 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 21244 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T14:54:27.418+09:00  INFO 21244 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T14:54:27.468+09:00  INFO 21244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T14:54:27.469+09:00  INFO 21244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T14:54:28.136+09:00  INFO 21244 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T14:54:28.205+09:00  INFO 21244 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+2023-10-20T14:54:29.079+09:00  INFO 21244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T14:54:29.080+09:00  INFO 21244 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T14:54:29.081+09:00  INFO 21244 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T14:54:29.083+09:00  INFO 21244 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T14:54:29.092+09:00  INFO 21244 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T14:54:29.093+09:00  INFO 21244 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T14:54:29.168+09:00  INFO 21244 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T14:54:29.169+09:00  INFO 21244 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1700 ms
+2023-10-20T14:54:29.201+09:00  INFO 21244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T14:54:29.292+09:00  INFO 21244 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T14:54:29.295+09:00  INFO 21244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T14:54:29.305+09:00  INFO 21244 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T14:54:29.468+09:00  INFO 21244 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T14:54:29.536+09:00  INFO 21244 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T14:54:29.539+09:00  INFO 21244 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T14:54:29.706+09:00  INFO 21244 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:54:29.866+09:00  INFO 21244 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T14:54:30.100+09:00  INFO 21244 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:54:30.674+09:00  INFO 21244 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T14:54:30.678+09:00  INFO 21244 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T14:54:30.987+09:00  WARN 21244 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T14:54:31.138+09:00  INFO 21244 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T14:54:31.363+09:00  INFO 21244 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T14:54:31.401+09:00  INFO 21244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T14:54:31.410+09:00  INFO 21244 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.491 seconds (process running for 4.94)
+2023-10-20T14:54:42.695+09:00  INFO 4404 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 4404 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T14:54:42.698+09:00  INFO 4404 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T14:54:42.745+09:00  INFO 4404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T14:54:42.745+09:00  INFO 4404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T14:54:43.369+09:00  INFO 4404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T14:54:43.430+09:00  INFO 4404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interfaces.
+2023-10-20T14:54:44.246+09:00  INFO 4404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T14:54:44.247+09:00  INFO 4404 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T14:54:44.248+09:00  INFO 4404 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T14:54:44.252+09:00  INFO 4404 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T14:54:44.263+09:00  INFO 4404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T14:54:44.264+09:00  INFO 4404 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T14:54:44.338+09:00  INFO 4404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T14:54:44.338+09:00  INFO 4404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1592 ms
+2023-10-20T14:54:44.367+09:00  INFO 4404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T14:54:44.445+09:00  INFO 4404 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T14:54:44.447+09:00  INFO 4404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T14:54:44.458+09:00  INFO 4404 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T14:54:44.609+09:00  INFO 4404 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T14:54:44.672+09:00  INFO 4404 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T14:54:44.674+09:00  INFO 4404 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T14:54:44.835+09:00  INFO 4404 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:54:44.977+09:00  INFO 4404 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T14:54:45.205+09:00  INFO 4404 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:54:45.710+09:00  INFO 4404 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T14:54:45.712+09:00  INFO 4404 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T14:54:45.998+09:00  WARN 4404 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T14:54:46.142+09:00  INFO 4404 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T14:54:46.354+09:00  INFO 4404 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T14:54:46.388+09:00  INFO 4404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T14:54:46.398+09:00  INFO 4404 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.19 seconds (process running for 4.647)
+2023-10-20T14:55:24.731+09:00  INFO 4404 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T14:55:24.731+09:00  INFO 4404 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T14:55:24.731+09:00  INFO 4404 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-10-20T14:59:55.208+09:00  INFO 19196 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 19196 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T14:59:55.210+09:00  INFO 19196 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T14:59:55.259+09:00  INFO 19196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T14:59:55.260+09:00  INFO 19196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T14:59:55.970+09:00  INFO 19196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T14:59:56.033+09:00  INFO 19196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
+2023-10-20T14:59:56.858+09:00  INFO 19196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T14:59:56.859+09:00  INFO 19196 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T14:59:56.860+09:00  INFO 19196 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T14:59:56.862+09:00  INFO 19196 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T14:59:56.872+09:00  INFO 19196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T14:59:56.872+09:00  INFO 19196 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T14:59:56.943+09:00  INFO 19196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T14:59:56.943+09:00  INFO 19196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1683 ms
+2023-10-20T14:59:56.972+09:00  INFO 19196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T14:59:57.058+09:00  INFO 19196 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T14:59:57.060+09:00  INFO 19196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T14:59:57.071+09:00  INFO 19196 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T14:59:57.224+09:00  INFO 19196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T14:59:57.287+09:00  INFO 19196 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T14:59:57.289+09:00  INFO 19196 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T14:59:57.451+09:00  INFO 19196 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:59:57.586+09:00  INFO 19196 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T14:59:57.806+09:00  INFO 19196 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T14:59:58.357+09:00  INFO 19196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T14:59:58.361+09:00  INFO 19196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T14:59:58.655+09:00  WARN 19196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T14:59:58.800+09:00  INFO 19196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T14:59:59.003+09:00  INFO 19196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T14:59:59.038+09:00  INFO 19196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T14:59:59.047+09:00  INFO 19196 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.348 seconds (process running for 4.853)
+2023-10-20T15:00:03.829+09:00  INFO 19196 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T15:00:03.830+09:00  INFO 19196 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T15:00:03.831+09:00  INFO 19196 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-20T15:00:15.014+09:00  INFO 19196 --- [http-nio-7080-exec-1] s.h.itemBox.controller.QuotesController  : 확인용
+2023-10-20T15:02:08.914+09:00  INFO 20748 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 20748 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T15:02:08.916+09:00  INFO 20748 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T15:02:08.966+09:00  INFO 20748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T15:02:08.966+09:00  INFO 20748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T15:02:09.643+09:00  INFO 20748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T15:02:09.712+09:00  INFO 20748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
+2023-10-20T15:02:10.559+09:00  INFO 20748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T15:02:10.561+09:00  INFO 20748 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T15:02:10.561+09:00  INFO 20748 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T15:02:10.564+09:00  INFO 20748 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T15:02:10.574+09:00  INFO 20748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T15:02:10.575+09:00  INFO 20748 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T15:02:10.645+09:00  INFO 20748 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T15:02:10.646+09:00  INFO 20748 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1679 ms
+2023-10-20T15:02:10.674+09:00  INFO 20748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T15:02:10.761+09:00  INFO 20748 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T15:02:10.763+09:00  INFO 20748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T15:02:10.773+09:00  INFO 20748 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T15:02:10.934+09:00  INFO 20748 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T15:02:11.003+09:00  INFO 20748 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T15:02:11.007+09:00  INFO 20748 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T15:02:11.168+09:00  INFO 20748 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:02:11.323+09:00  INFO 20748 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T15:02:11.542+09:00  INFO 20748 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:02:12.130+09:00  INFO 20748 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T15:02:12.133+09:00  INFO 20748 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T15:02:12.462+09:00  WARN 20748 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T15:02:12.607+09:00  INFO 20748 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T15:02:12.824+09:00  INFO 20748 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T15:02:12.866+09:00  INFO 20748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T15:02:12.876+09:00  INFO 20748 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.464 seconds (process running for 4.925)
+2023-10-20T15:02:17.855+09:00  INFO 20748 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T15:02:17.856+09:00  INFO 20748 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T15:02:17.857+09:00  INFO 20748 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-20T15:02:18.004+09:00  INFO 20748 --- [http-nio-7080-exec-1] s.h.itemBox.controller.QuotesController  : 확인용
+2023-10-20T15:33:19.024+09:00  INFO 2068 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 2068 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T15:33:19.026+09:00  INFO 2068 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T15:33:19.077+09:00  INFO 2068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T15:33:19.078+09:00  INFO 2068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T15:33:19.762+09:00  INFO 2068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T15:33:19.825+09:00  INFO 2068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
+2023-10-20T15:33:20.774+09:00  INFO 2068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T15:33:20.775+09:00  INFO 2068 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T15:33:20.776+09:00  INFO 2068 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T15:33:20.779+09:00  INFO 2068 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T15:33:20.790+09:00  INFO 2068 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T15:33:20.791+09:00  INFO 2068 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T15:33:20.875+09:00  INFO 2068 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T15:33:20.876+09:00  INFO 2068 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1798 ms
+2023-10-20T15:33:20.908+09:00  INFO 2068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T15:33:21.003+09:00  INFO 2068 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T15:33:21.005+09:00  INFO 2068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T15:33:21.016+09:00  INFO 2068 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T15:33:21.178+09:00  INFO 2068 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T15:33:21.234+09:00  INFO 2068 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T15:33:21.236+09:00  INFO 2068 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T15:33:21.385+09:00  INFO 2068 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:33:21.536+09:00  INFO 2068 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T15:33:21.775+09:00  INFO 2068 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:33:22.296+09:00  INFO 2068 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T15:33:22.299+09:00  INFO 2068 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T15:33:22.616+09:00  WARN 2068 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T15:33:22.768+09:00  INFO 2068 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T15:33:22.981+09:00  INFO 2068 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T15:33:23.016+09:00  INFO 2068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T15:33:23.025+09:00  INFO 2068 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.508 seconds (process running for 5.002)
+2023-10-20T15:33:47.881+09:00  INFO 2068 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T15:33:47.882+09:00  INFO 2068 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T15:33:47.884+09:00  INFO 2068 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-10-20T15:36:09.592+09:00  INFO 23768 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 23768 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T15:36:09.594+09:00  INFO 23768 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T15:36:09.641+09:00  INFO 23768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T15:36:09.642+09:00  INFO 23768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T15:36:10.283+09:00  INFO 23768 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T15:36:10.346+09:00  INFO 23768 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2023-10-20T15:36:11.105+09:00  INFO 23768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T15:36:11.107+09:00  INFO 23768 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T15:36:11.107+09:00  INFO 23768 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T15:36:11.109+09:00  INFO 23768 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T15:36:11.119+09:00  INFO 23768 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T15:36:11.120+09:00  INFO 23768 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T15:36:11.190+09:00  INFO 23768 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T15:36:11.191+09:00  INFO 23768 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1549 ms
+2023-10-20T15:36:11.219+09:00  INFO 23768 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T15:36:11.300+09:00  INFO 23768 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T15:36:11.302+09:00  INFO 23768 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T15:36:11.312+09:00  INFO 23768 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T15:36:11.462+09:00  INFO 23768 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T15:36:11.515+09:00  INFO 23768 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T15:36:11.517+09:00  INFO 23768 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T15:36:11.654+09:00  INFO 23768 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:36:11.794+09:00  INFO 23768 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T15:36:12.015+09:00  INFO 23768 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:36:12.499+09:00  INFO 23768 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T15:36:12.502+09:00  INFO 23768 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T15:36:12.786+09:00  WARN 23768 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T15:36:12.924+09:00  INFO 23768 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T15:36:13.114+09:00  INFO 23768 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T15:36:13.146+09:00  INFO 23768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T15:36:13.157+09:00  INFO 23768 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.038 seconds (process running for 4.492)
+2023-10-20T15:36:16.298+09:00  INFO 23768 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T15:36:16.298+09:00  INFO 23768 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T15:36:16.299+09:00  INFO 23768 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-20T15:38:24.342+09:00  INFO 17480 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 17480 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T15:38:24.343+09:00  INFO 17480 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T15:38:24.391+09:00  INFO 17480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T15:38:24.391+09:00  INFO 17480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T15:38:24.990+09:00  INFO 17480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T15:38:25.052+09:00  INFO 17480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2023-10-20T15:38:25.796+09:00  INFO 17480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T15:38:25.797+09:00  INFO 17480 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T15:38:25.797+09:00  INFO 17480 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T15:38:25.799+09:00  INFO 17480 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T15:38:25.809+09:00  INFO 17480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T15:38:25.810+09:00  INFO 17480 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T15:38:25.878+09:00  INFO 17480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T15:38:25.879+09:00  INFO 17480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1487 ms
+2023-10-20T15:38:25.906+09:00  INFO 17480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T15:38:25.986+09:00  INFO 17480 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T15:38:25.988+09:00  INFO 17480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T15:38:25.998+09:00  INFO 17480 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T15:38:26.139+09:00  INFO 17480 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T15:38:26.192+09:00  INFO 17480 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T15:38:26.195+09:00  INFO 17480 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T15:38:26.329+09:00  INFO 17480 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:38:26.468+09:00  INFO 17480 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T15:38:26.694+09:00  INFO 17480 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:38:27.204+09:00  INFO 17480 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T15:38:27.207+09:00  INFO 17480 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T15:38:27.497+09:00  WARN 17480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T15:38:27.639+09:00  INFO 17480 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T15:38:27.823+09:00  INFO 17480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T15:38:27.856+09:00  INFO 17480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T15:38:27.865+09:00  INFO 17480 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 3.985 seconds (process running for 4.443)
+2023-10-20T15:49:58.918+09:00  INFO 17480 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T15:49:58.919+09:00  INFO 17480 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T15:49:58.920+09:00  INFO 17480 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-20T15:50:58.327+09:00  INFO 24616 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 24616 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-20T15:50:58.329+09:00  INFO 24616 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-20T15:50:58.380+09:00  INFO 24616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-20T15:50:58.380+09:00  INFO 24616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-20T15:50:59.026+09:00  INFO 24616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-20T15:50:59.093+09:00  INFO 24616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+2023-10-20T15:50:59.883+09:00  INFO 24616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
+2023-10-20T15:50:59.884+09:00  INFO 24616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-10-20T15:50:59.885+09:00  INFO 24616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-10-20T15:50:59.888+09:00  INFO 24616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-10-20T15:50:59.897+09:00  INFO 24616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T15:50:59.897+09:00  INFO 24616 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-20T15:50:59.966+09:00  INFO 24616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T15:50:59.966+09:00  INFO 24616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1585 ms
+2023-10-20T15:50:59.994+09:00  INFO 24616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-20T15:51:00.083+09:00  INFO 24616 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-20T15:51:00.085+09:00  INFO 24616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-20T15:51:00.096+09:00  INFO 24616 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
+2023-10-20T15:51:00.242+09:00  INFO 24616 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-20T15:51:00.297+09:00  INFO 24616 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-20T15:51:00.299+09:00  INFO 24616 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-20T15:51:00.442+09:00  INFO 24616 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:51:00.587+09:00  INFO 24616 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-20T15:51:00.801+09:00  INFO 24616 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-20T15:51:01.379+09:00  INFO 24616 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-20T15:51:01.382+09:00  INFO 24616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-20T15:51:01.672+09:00  WARN 24616 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-20T15:51:01.812+09:00  INFO 24616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-20T15:51:02.020+09:00  INFO 24616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-20T15:51:02.052+09:00  INFO 24616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
+2023-10-20T15:51:02.062+09:00  INFO 24616 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.272 seconds (process running for 4.778)
+2023-10-20T15:51:04.609+09:00  INFO 24616 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T15:51:04.609+09:00  INFO 24616 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T15:51:04.610+09:00  INFO 24616 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

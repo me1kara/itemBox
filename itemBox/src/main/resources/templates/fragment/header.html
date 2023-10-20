@@ -1,74 +1,87 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head>
-    <meta charset="UTF-8">
+<html
+  lang="ko"
+  xmlns:th="http://www.thymeleaf.org"
+>
+  <head>
+    <meta charset="UTF-8" />
     <title>쇼핑몰</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <link rel="stylesheet" href="../css/header.css">
-    <script>
-        function checkSearchText(){
-            let searchInput = document.getElementById('search-text');
-            if(searchInput.value.trim()==''){
-                return false;
-            }
-        }
-    </script>
-</head>
-<body>
+  </head>
+  <body>
     <header th:fragment="header()">
-        <div class="header-top">
-            <div class="container">
-                <div class="d-flex justify-content-between" id="headerBar">
-                    <div class="col-md-4" id="logoWrap">
-                        <a class="logo" href="/" style="color: #57a0e3;">AIIGO</a>
-                    </div>
-                    <div class="col-md-4 text-center" id="searchWrap">
-                        <form class="searchItem" method="get" th:action="@{/product/shopping}" onsubmit="return checkSearchText();">
-                            <input type="hidden" name="searchType" value="titleOrContent">
-                            <input type="text" placeholder="상품을 검색하세요" name="keyword" id="search-text" style="margin-right: 0;">
-                            <button type="submit" class="btn btn-sm" style="background-color: #57a0e3; color: white;"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                    <div class="col-md-4 text-right" id="loginWrap">
-                        <ul class="nav justify-content-end">
-                            <th:block sec:authorize="!isAuthenticated()" class="nav-item">
-                                <a class="nav-link text-dark" th:href=@{/member/login}>로그인</a>
-                            </th:block>
-                            <form sec:authorize="isAuthenticated()" th:action="@{/member/logout}"method="post" class="nav-item">
-                                <button class="btn text-dark" type="submit">로그아웃</button>
-                                <a class="btn text-dark" th:href=@{/member/myPage(item=cart)}>마이페이지</a>
-                            </form>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="header-d">
+        <div class="header-title">
+          <h4><strong>아이템박스!</strong></h4>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light" id="header-middle">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="toggle-btn">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" id="shopping" th:href=@{/product/shopping}>쇼핑</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="ranking" th:href=@{/product/ranking}>랭킹</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="hotDeal" th:href=@{/product/hotDeal}>핫딜</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="question" th:href="@{/help/question?listItem=manyQuestionList}">물어봐요!</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div class="header-menu-wrap">
+          <div>
+            <label id="menu-toggle" for="header-checkbox"></label>
+          </div>
+          <input type="checkbox" id="header-checkbox" />
+          <nav class="header-menu" id="header-menu" name="header-menu">
+            <article class="items-wrap" style="border: none">
+              <p class="items-cate" style="border-top: none">
+                <span></span><span>맵</span>
+              </p>
+              <ul class="items">
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+              </ul>
+            </article>
+            <article class="items-wrap">
+              <p class="items-cate"><span></span><span>맵</span></p>
+              <ul class="items">
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+              </ul>
+            </article>
+            <article class="items-wrap">
+              <p class="items-cate"><span></span><span>맵</span></p>
+              <ul class="items">
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+                <li><a href="" class="link-item">1</a></li>
+              </ul>
+            </article>
+          </nav>
+        </div>
+      </div>
+      <div class="header-m"></div>
+
+      <script>
+        const checkbox = document.getElementById("header-checkbox");
+        const image_label = document.querySelector(
+          ".header-menu-wrap > div > label"
+        );
+        const header_menu = document.getElementById("header-menu");
+        const body = document.querySelector("body");
+
+        checkbox.addEventListener("change", function () {
+          if (checkbox.checked) {
+            // 체크박스가 선택되면 이미지를 변경
+            $(".header-menu-wrap").css("border-left", "2px solid black");
+            image_label.style.backgroundImage =
+              "url('https://img.icons8.com/ios-filled/50/delete-sign--v1.png')";
+          } else {
+            // 체크박스가 선택 해제되면 이미지를 다시 원래 이미지로 변경
+            $(".header-menu-wrap").css("border-left", "none");
+            image_label.style.backgroundImage =
+              "url('https://img.icons8.com/ios/50/menu--v7.png')";
+          }
+        });
+      </script>
     </header>
-</body>
+  </body>
 </html>

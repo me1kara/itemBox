@@ -1,0 +1,11 @@
+에러사항 기록
+
+테스트실행에러
+case : 테스트 클래스 경로 인식 실패 문제
+->     build.gradle 파일에 맨 마지막 단락 task.build("test") -> test {} 변경
+
+인텔리제이 실행에러
+case : Process finished with exit code 0
+->     file-setting-build 설정을 inteliJ -> gradle로 변경
+
+

@@ -27,13 +27,36 @@ logging:
 
 --- # local
 spring:
+  h2:
+    console:
+      enabled: true
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: none
-  config:
     activate:
       on-profile: local # ??????
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+#      data-locations: classpath:sql/data-h2.sql # 서버 시작시 dml sql문을 실행할 위치 및 파일 지정
+#      schema-locations: classpath:sql/schema-h2.sql # 서버 시작시 ddl sql문을 실행할 위치 및 파일 지정
+logging:
+  file:
+    path : log/
+    max-size: 500MB
+    max-history: 10
+#  level:
+#    root: info
+#    test.testspring.aop: debug
+
+
+
 server:
   port: 7080
   error:
