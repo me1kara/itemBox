@@ -7,7 +7,8 @@ from selenium.webdriver.chrome.options import Options
 import re
 
 
-result = {}
+result = []
+# result = {}
 
 def get_local_foods() :
     base_url = f"https://namu.wiki/w/%ED%95%9C%EA%B5%AD%20%EC%9A%94%EB%A6%AC/%EC%A7%80%EC%97%AD%EB%B3%84#s-12"
@@ -36,8 +37,6 @@ def get_local_foods() :
 
         return result
 
-        #seoul, incheon, suwon, yongin, uijeongbu, paju, pyeongtaek, pocheon, gwangju, ansan, ext
-        
 
 def get_local_food(local_ul,local_titles,n) :    
     #지역n조
@@ -54,16 +53,16 @@ def get_local_food(local_ul,local_titles,n) :
         fl = a.find('ul',class_='CS4El3r0')
         if fl!=None :
             food_list = fl.find_all('li',recursive=False)
-            foods = []
+#             foods = []
             for sl in food_list :
                 #요소에서 텍스트를 추출하고 정규식으로 정형화함
                 food = sl.find('div',class_='hQuAzr23').get_text(strip=True)
                 text1 = re.sub(r'\[\d+\]', '', food)
                 if ':' in text1 :
-                    foods.append(text1.split(':')[0])
+                    result.append([a_title, text1.split(':')[0]])
                 else : 
-                    foods.append(text1)
-            result[a_title] = foods
+                    result.append([a_title,text1])
+#             result[a_title] = foods
 
 def get_jeju_food(local_ul) :
 
@@ -76,8 +75,9 @@ def get_jeju_food(local_ul) :
         #n조 음식이름
         food = a.find('div',class_='hQuAzr23',recursive=False).get_text(strip=True)
         text = re.sub(r'\[\d+\]', '', food)
-        food_list.append(text)
-    result['제주도'] = food_list
+#         food_list.append(text)
+        result.append(['제주도',text])
+#     result['제주도'] = food_list
 
 
 

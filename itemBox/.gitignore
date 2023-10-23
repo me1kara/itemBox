@@ -36,7 +36,9 @@ out/
 ### VS Code ###
 .vscode/
 
-#### yml ###
-##application-db_lcoal.yml
-##application-db_prod.yml
+#### custome ###
+application-db_lcoal.yml
+application-db_prod.yml
+/sql/data-h2.sql
+/sql/schema-h2.sql
 

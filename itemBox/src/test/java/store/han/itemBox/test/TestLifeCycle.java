@@ -2,43 +2,37 @@ package store.han.itemBox.test;
 
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.BDDMockito;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Import;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultMatcher;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import store.han.itemBox.controller.HomeController;
-import store.han.itemBox.controller.QuotesController;
-import store.han.itemBox.entity.Quotes;
+import store.han.itemBox.repository.QuotesRepository;
 import store.han.itemBox.service.QuotesService;
+
+import java.util.Optional;
 
 //@WebMvcTest(HomeController.class) 컨트롤러 테스트 할때 사용
 //@AutoConfigureWebMvc MockMvc 주입용 컨트롤러 테스트 할때 사용2 but 없어도 됨
 
 //@SpringBootTest(classes = {QuotesService.class})
 // or
-//ExtendsWith(SpringExtends.class)
-//import({TestServiceImpl.class, TestService2.class}) 빈을 받고자 하는 클래스
+//@ExtendWith(SpringExtension.class)
+//@Import({QuotesService.class}) 컨테이너에서 받아올 bean을 기술,
 
 
 public class TestLifeCycle {
     /*
     @Autowired
-    private MockMvc mockMvc; , Mvc 테스트 용도로 사용한 진짜 bean
+    private MockMvc mockMvc; , Mvc 테스트 용도로 사용한 가짜 Controller, 위에 입력한 controller 경로들이 주입됨
 
     @MockBean
-    private QuotesService, 테스트할 클래스가 주입받은 가짜 bean
+    private QuotesService, 위에 클래스에서 받아온 bean이 주입받은 bean을 가짜 빈으로 만들어서 주입해줘야 됨.진짜 bean은 성립이 안 됨
+
     */
+
+    @Autowired
+    QuotesService quotesService;
+
+    @Autowired
+    QuotesRepository quotesRepository;
+
     @BeforeAll
     static void beforeAll(){
         System.out.println("## Before All");
@@ -63,8 +57,10 @@ public class TestLifeCycle {
     void mvcTest() throws Exception {
         System.out.println("## 컨트롤러 필요 테스트코드");
         /*
-            given : 가짜객체에 대한 서비스로직과 리턴값을 '상정'하는것
+            given : 가짜객체에 대한 서비스로직과 리턴값을 '상정'해놓아야함
             BDDMockito.given(QuotesService.random()).willReturn(new Quotes("1"));
+            컨테이너에서 받은 controller bean의 di인 quotesService를 가짜 빈으로 만들었음
+            해당 가짜 bean의 특정 메서드에 대해 설정함
 
             get,post : rest-api를 체크
             jsonPath : 결과 증명
@@ -85,8 +81,6 @@ public class TestLifeCycle {
             or
 
             String json = new ObjectMapper.writeValueAsString(DTO)
-
-
             사용예제
             mockMvc.perform(get("/quotes/random")
                 if 넘기는 값이 있을시
@@ -116,8 +110,6 @@ public class TestLifeCycle {
         System.out.println("## test2");
         //Mockito.when(quotesService2.random()).thenReturn(new Quotes(1l,"하이"))
         //Assertions.assertEquals("하이", new Quotes("1l","2").getText());
-        //
-
 
     }
 
@@ -125,5 +117,7 @@ public class TestLifeCycle {
     @Disabled
     void test3(){
         System.out.println("## test3");
+        System.out.println("확ㄴ잉용ㅇㅇ");
+        
     }
 }

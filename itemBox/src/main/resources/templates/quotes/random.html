@@ -19,7 +19,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <title>타이틀</title>
+    <title>아이템박스</title>
     <link rel="stylesheet" href="/static/css/home.css" />
     <style>
       .api-wrap {
@@ -35,7 +35,7 @@
     </style>
   </head>
   <body>
-    <div layout:fragment="content" class="container">
+    <main layout:fragment="content" class="container">
       <!-- content script -->
       <section class="api-wrap">
         <div class="title-wrap">
@@ -54,7 +54,7 @@
           </button>
         </div>
       </section>
-    </div>
+    </main>
     <script>
       const quotes = $(".quotes-text");
       $("#quotes-btn").click(() => {

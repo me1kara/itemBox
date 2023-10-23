@@ -20,7 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <link rel="stylesheet" th:href="@{/css/home.css}" />
-    <title>타이틀</title>
+    <title>아이템박스</title>
 
     <style>
       .mainLogo-wrap {
@@ -115,9 +115,9 @@
             <p class="item-cate"><span></span><span>맵</span></p>
             <ul class="items">
               <li class="item">
-                <a href="">
+                <a th:href="@{/map/localFoods}">
                   <img src="" alt="api-image" />
-                  <span>api이름</span>
+                  <span>지역전통음식리스트</span>
                 </a>
               </li>
               <li class="item-none"></li>

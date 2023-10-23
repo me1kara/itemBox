@@ -10,9 +10,10 @@ with open('food_data.csv', 'w', newline='', encoding="utf-8-sig") as csvfile:
     writer = csv.writer(csvfile)
 
     # CSV 파일의 첫 번째 행에 열 이름 추가
-    writer.writerow(['Local', 'Foods'])
+    writer.writerow(['region', 'food'])
 
     # 데이터를 CSV 파일에 쓰기
-    for region, foods in local_foods.items():
-        writer.writerow([region, ', '.join(foods)])
-
+#     for region, foods in local_foods.items():
+#         writer.writerow([region, ', '.join(foods)])
+    for region, food in local_foods:
+         writer.writerow([region, food])

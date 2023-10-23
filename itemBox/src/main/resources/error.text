@@ -1,10 +1,15 @@
 에러사항 기록
 
+실행에러
+case : snapshot 에러
+->     oneDrive or usb 등의 이동디스크에 프로젝트가 위치할 시 에러나는 경우가 있음
+
 테스트실행에러
 case : 테스트 클래스 경로 인식 실패 문제
 ->     build.gradle 파일에 맨 마지막 단락 task.build("test") -> test {} 변경
 case : gradle로 build 시 gradle 버전 차이
-->
+->     terminal ./gradlew wrapper --gradle-version 변경버전 // 9버전이 없음
+->     setting->build->compiler->java compiler->additional command line parameter = --warning-mode=all --stackctrace // 해결
 
 인텔리제이 실행에러
 case : Process finished with exit code 0
