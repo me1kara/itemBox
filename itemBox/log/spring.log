@@ -1,367 +1,515 @@
-2023-10-20T14:45:43.421+09:00  INFO 14788 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 14788 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T14:45:43.423+09:00  INFO 14788 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T14:45:43.478+09:00  INFO 14788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T14:45:43.478+09:00  INFO 14788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T14:45:44.156+09:00  INFO 14788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T14:45:44.221+09:00  INFO 14788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
-2023-10-20T14:45:45.085+09:00  INFO 14788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T14:45:45.087+09:00  INFO 14788 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T14:45:45.087+09:00  INFO 14788 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T14:45:45.089+09:00  INFO 14788 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T14:45:45.100+09:00  INFO 14788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T14:45:45.100+09:00  INFO 14788 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T14:45:45.173+09:00  INFO 14788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T14:45:45.173+09:00  INFO 14788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1693 ms
-2023-10-20T14:45:45.210+09:00  INFO 14788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T14:45:45.298+09:00  INFO 14788 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T14:45:45.300+09:00  INFO 14788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T14:45:45.311+09:00  INFO 14788 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T14:45:45.461+09:00  INFO 14788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T14:45:45.537+09:00  INFO 14788 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T14:45:45.540+09:00  INFO 14788 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T14:45:45.713+09:00  INFO 14788 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:45:45.854+09:00  INFO 14788 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T14:45:46.093+09:00  INFO 14788 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:45:46.646+09:00  INFO 14788 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T14:45:46.649+09:00  INFO 14788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T14:45:46.948+09:00  WARN 14788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T14:45:47.093+09:00  INFO 14788 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T14:45:47.317+09:00  INFO 14788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T14:45:47.352+09:00  INFO 14788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T14:45:47.361+09:00  INFO 14788 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.454 seconds (process running for 4.918)
-2023-10-20T14:51:35.433+09:00  INFO 14788 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-20T14:51:35.433+09:00  INFO 14788 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-20T14:51:35.433+09:00  INFO 14788 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-10-20T14:52:45.377+09:00  INFO 6612 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 6612 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T14:52:45.379+09:00  INFO 6612 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T14:52:45.435+09:00  INFO 6612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T14:52:45.435+09:00  INFO 6612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T14:52:46.115+09:00  INFO 6612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T14:52:46.183+09:00  INFO 6612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
-2023-10-20T14:52:47.126+09:00  INFO 6612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T14:52:47.127+09:00  INFO 6612 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T14:52:47.127+09:00  INFO 6612 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T14:52:47.129+09:00  INFO 6612 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T14:52:47.141+09:00  INFO 6612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T14:52:47.141+09:00  INFO 6612 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T14:52:47.222+09:00  INFO 6612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T14:52:47.223+09:00  INFO 6612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1786 ms
-2023-10-20T14:52:47.258+09:00  INFO 6612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T14:52:47.364+09:00  INFO 6612 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T14:52:47.367+09:00  INFO 6612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T14:52:47.382+09:00  INFO 6612 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T14:52:47.569+09:00  INFO 6612 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T14:52:47.654+09:00  INFO 6612 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T14:52:47.658+09:00  INFO 6612 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T14:52:47.857+09:00  INFO 6612 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:52:48.064+09:00  INFO 6612 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T14:52:48.350+09:00  INFO 6612 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:52:48.933+09:00  INFO 6612 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T14:52:48.936+09:00  INFO 6612 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T14:52:49.263+09:00  WARN 6612 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T14:52:49.413+09:00  INFO 6612 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T14:52:49.655+09:00  INFO 6612 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T14:52:49.704+09:00  INFO 6612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T14:52:49.716+09:00  INFO 6612 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.929 seconds (process running for 5.394)
-2023-10-20T14:53:07.306+09:00  INFO 3488 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 3488 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T14:53:07.309+09:00  INFO 3488 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T14:53:07.356+09:00  INFO 3488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T14:53:07.356+09:00  INFO 3488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T14:53:08.010+09:00  INFO 3488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T14:53:08.074+09:00  INFO 3488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
-2023-10-20T14:53:08.890+09:00  INFO 3488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T14:53:08.891+09:00  INFO 3488 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T14:53:08.891+09:00  INFO 3488 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T14:53:08.894+09:00  INFO 3488 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T14:53:08.904+09:00  INFO 3488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T14:53:08.904+09:00  INFO 3488 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T14:53:08.973+09:00  INFO 3488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T14:53:08.974+09:00  INFO 3488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1617 ms
-2023-10-20T14:53:08.999+09:00  INFO 3488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T14:53:09.083+09:00  INFO 3488 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T14:53:09.085+09:00  INFO 3488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T14:53:09.095+09:00  INFO 3488 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T14:53:09.247+09:00  INFO 3488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T14:53:09.309+09:00  INFO 3488 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T14:53:09.312+09:00  INFO 3488 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T14:53:09.468+09:00  INFO 3488 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:53:09.600+09:00  INFO 3488 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T14:53:09.836+09:00  INFO 3488 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:53:10.344+09:00  INFO 3488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T14:53:10.347+09:00  INFO 3488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T14:53:10.655+09:00  WARN 3488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T14:53:10.794+09:00  INFO 3488 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T14:53:11.018+09:00  INFO 3488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T14:53:11.055+09:00  INFO 3488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T14:53:11.065+09:00  INFO 3488 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.253 seconds (process running for 4.718)
-2023-10-20T14:54:27.416+09:00  INFO 21244 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 21244 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T14:54:27.418+09:00  INFO 21244 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T14:54:27.468+09:00  INFO 21244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T14:54:27.469+09:00  INFO 21244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T14:54:28.136+09:00  INFO 21244 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T14:54:28.205+09:00  INFO 21244 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
-2023-10-20T14:54:29.079+09:00  INFO 21244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T14:54:29.080+09:00  INFO 21244 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T14:54:29.081+09:00  INFO 21244 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T14:54:29.083+09:00  INFO 21244 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T14:54:29.092+09:00  INFO 21244 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T14:54:29.093+09:00  INFO 21244 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T14:54:29.168+09:00  INFO 21244 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T14:54:29.169+09:00  INFO 21244 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1700 ms
-2023-10-20T14:54:29.201+09:00  INFO 21244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T14:54:29.292+09:00  INFO 21244 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T14:54:29.295+09:00  INFO 21244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T14:54:29.305+09:00  INFO 21244 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T14:54:29.468+09:00  INFO 21244 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T14:54:29.536+09:00  INFO 21244 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T14:54:29.539+09:00  INFO 21244 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T14:54:29.706+09:00  INFO 21244 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:54:29.866+09:00  INFO 21244 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T14:54:30.100+09:00  INFO 21244 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:54:30.674+09:00  INFO 21244 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T14:54:30.678+09:00  INFO 21244 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T14:54:30.987+09:00  WARN 21244 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T14:54:31.138+09:00  INFO 21244 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T14:54:31.363+09:00  INFO 21244 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T14:54:31.401+09:00  INFO 21244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T14:54:31.410+09:00  INFO 21244 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.491 seconds (process running for 4.94)
-2023-10-20T14:54:42.695+09:00  INFO 4404 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 4404 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T14:54:42.698+09:00  INFO 4404 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T14:54:42.745+09:00  INFO 4404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T14:54:42.745+09:00  INFO 4404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T14:54:43.369+09:00  INFO 4404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T14:54:43.430+09:00  INFO 4404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interfaces.
-2023-10-20T14:54:44.246+09:00  INFO 4404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T14:54:44.247+09:00  INFO 4404 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T14:54:44.248+09:00  INFO 4404 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T14:54:44.252+09:00  INFO 4404 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T14:54:44.263+09:00  INFO 4404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T14:54:44.264+09:00  INFO 4404 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T14:54:44.338+09:00  INFO 4404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T14:54:44.338+09:00  INFO 4404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1592 ms
-2023-10-20T14:54:44.367+09:00  INFO 4404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T14:54:44.445+09:00  INFO 4404 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T14:54:44.447+09:00  INFO 4404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T14:54:44.458+09:00  INFO 4404 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T14:54:44.609+09:00  INFO 4404 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T14:54:44.672+09:00  INFO 4404 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T14:54:44.674+09:00  INFO 4404 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T14:54:44.835+09:00  INFO 4404 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:54:44.977+09:00  INFO 4404 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T14:54:45.205+09:00  INFO 4404 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:54:45.710+09:00  INFO 4404 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T14:54:45.712+09:00  INFO 4404 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T14:54:45.998+09:00  WARN 4404 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T14:54:46.142+09:00  INFO 4404 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T14:54:46.354+09:00  INFO 4404 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T14:54:46.388+09:00  INFO 4404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T14:54:46.398+09:00  INFO 4404 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.19 seconds (process running for 4.647)
-2023-10-20T14:55:24.731+09:00  INFO 4404 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-20T14:55:24.731+09:00  INFO 4404 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-20T14:55:24.731+09:00  INFO 4404 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-10-20T14:59:55.208+09:00  INFO 19196 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 19196 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T14:59:55.210+09:00  INFO 19196 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T14:59:55.259+09:00  INFO 19196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T14:59:55.260+09:00  INFO 19196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T14:59:55.970+09:00  INFO 19196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T14:59:56.033+09:00  INFO 19196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
-2023-10-20T14:59:56.858+09:00  INFO 19196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T14:59:56.859+09:00  INFO 19196 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T14:59:56.860+09:00  INFO 19196 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T14:59:56.862+09:00  INFO 19196 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T14:59:56.872+09:00  INFO 19196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T14:59:56.872+09:00  INFO 19196 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T14:59:56.943+09:00  INFO 19196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T14:59:56.943+09:00  INFO 19196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1683 ms
-2023-10-20T14:59:56.972+09:00  INFO 19196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T14:59:57.058+09:00  INFO 19196 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T14:59:57.060+09:00  INFO 19196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T14:59:57.071+09:00  INFO 19196 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T14:59:57.224+09:00  INFO 19196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T14:59:57.287+09:00  INFO 19196 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T14:59:57.289+09:00  INFO 19196 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T14:59:57.451+09:00  INFO 19196 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:59:57.586+09:00  INFO 19196 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T14:59:57.806+09:00  INFO 19196 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T14:59:58.357+09:00  INFO 19196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T14:59:58.361+09:00  INFO 19196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T14:59:58.655+09:00  WARN 19196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T14:59:58.800+09:00  INFO 19196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T14:59:59.003+09:00  INFO 19196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T14:59:59.038+09:00  INFO 19196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T14:59:59.047+09:00  INFO 19196 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.348 seconds (process running for 4.853)
-2023-10-20T15:00:03.829+09:00  INFO 19196 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-20T15:00:03.830+09:00  INFO 19196 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-20T15:00:03.831+09:00  INFO 19196 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-10-20T15:00:15.014+09:00  INFO 19196 --- [http-nio-7080-exec-1] s.h.itemBox.controller.QuotesController  : 확인용
-2023-10-20T15:02:08.914+09:00  INFO 20748 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 20748 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T15:02:08.916+09:00  INFO 20748 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T15:02:08.966+09:00  INFO 20748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T15:02:08.966+09:00  INFO 20748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T15:02:09.643+09:00  INFO 20748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T15:02:09.712+09:00  INFO 20748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
-2023-10-20T15:02:10.559+09:00  INFO 20748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T15:02:10.561+09:00  INFO 20748 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T15:02:10.561+09:00  INFO 20748 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T15:02:10.564+09:00  INFO 20748 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T15:02:10.574+09:00  INFO 20748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T15:02:10.575+09:00  INFO 20748 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T15:02:10.645+09:00  INFO 20748 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T15:02:10.646+09:00  INFO 20748 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1679 ms
-2023-10-20T15:02:10.674+09:00  INFO 20748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T15:02:10.761+09:00  INFO 20748 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T15:02:10.763+09:00  INFO 20748 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T15:02:10.773+09:00  INFO 20748 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T15:02:10.934+09:00  INFO 20748 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T15:02:11.003+09:00  INFO 20748 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T15:02:11.007+09:00  INFO 20748 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T15:02:11.168+09:00  INFO 20748 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:02:11.323+09:00  INFO 20748 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T15:02:11.542+09:00  INFO 20748 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:02:12.130+09:00  INFO 20748 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T15:02:12.133+09:00  INFO 20748 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T15:02:12.462+09:00  WARN 20748 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T15:02:12.607+09:00  INFO 20748 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T15:02:12.824+09:00  INFO 20748 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T15:02:12.866+09:00  INFO 20748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T15:02:12.876+09:00  INFO 20748 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.464 seconds (process running for 4.925)
-2023-10-20T15:02:17.855+09:00  INFO 20748 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-20T15:02:17.856+09:00  INFO 20748 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-20T15:02:17.857+09:00  INFO 20748 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-10-20T15:02:18.004+09:00  INFO 20748 --- [http-nio-7080-exec-1] s.h.itemBox.controller.QuotesController  : 확인용
-2023-10-20T15:33:19.024+09:00  INFO 2068 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 2068 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T15:33:19.026+09:00  INFO 2068 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T15:33:19.077+09:00  INFO 2068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T15:33:19.078+09:00  INFO 2068 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T15:33:19.762+09:00  INFO 2068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T15:33:19.825+09:00  INFO 2068 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
-2023-10-20T15:33:20.774+09:00  INFO 2068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T15:33:20.775+09:00  INFO 2068 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T15:33:20.776+09:00  INFO 2068 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T15:33:20.779+09:00  INFO 2068 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T15:33:20.790+09:00  INFO 2068 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T15:33:20.791+09:00  INFO 2068 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T15:33:20.875+09:00  INFO 2068 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T15:33:20.876+09:00  INFO 2068 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1798 ms
-2023-10-20T15:33:20.908+09:00  INFO 2068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T15:33:21.003+09:00  INFO 2068 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T15:33:21.005+09:00  INFO 2068 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T15:33:21.016+09:00  INFO 2068 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T15:33:21.178+09:00  INFO 2068 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T15:33:21.234+09:00  INFO 2068 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T15:33:21.236+09:00  INFO 2068 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T15:33:21.385+09:00  INFO 2068 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:33:21.536+09:00  INFO 2068 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T15:33:21.775+09:00  INFO 2068 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:33:22.296+09:00  INFO 2068 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T15:33:22.299+09:00  INFO 2068 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T15:33:22.616+09:00  WARN 2068 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T15:33:22.768+09:00  INFO 2068 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T15:33:22.981+09:00  INFO 2068 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T15:33:23.016+09:00  INFO 2068 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T15:33:23.025+09:00  INFO 2068 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.508 seconds (process running for 5.002)
-2023-10-20T15:33:47.881+09:00  INFO 2068 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-20T15:33:47.882+09:00  INFO 2068 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-20T15:33:47.884+09:00  INFO 2068 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-10-20T15:36:09.592+09:00  INFO 23768 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 23768 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T15:36:09.594+09:00  INFO 23768 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T15:36:09.641+09:00  INFO 23768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T15:36:09.642+09:00  INFO 23768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T15:36:10.283+09:00  INFO 23768 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T15:36:10.346+09:00  INFO 23768 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
-2023-10-20T15:36:11.105+09:00  INFO 23768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T15:36:11.107+09:00  INFO 23768 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T15:36:11.107+09:00  INFO 23768 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T15:36:11.109+09:00  INFO 23768 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T15:36:11.119+09:00  INFO 23768 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T15:36:11.120+09:00  INFO 23768 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T15:36:11.190+09:00  INFO 23768 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T15:36:11.191+09:00  INFO 23768 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1549 ms
-2023-10-20T15:36:11.219+09:00  INFO 23768 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T15:36:11.300+09:00  INFO 23768 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T15:36:11.302+09:00  INFO 23768 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T15:36:11.312+09:00  INFO 23768 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T15:36:11.462+09:00  INFO 23768 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T15:36:11.515+09:00  INFO 23768 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T15:36:11.517+09:00  INFO 23768 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T15:36:11.654+09:00  INFO 23768 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:36:11.794+09:00  INFO 23768 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T15:36:12.015+09:00  INFO 23768 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:36:12.499+09:00  INFO 23768 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T15:36:12.502+09:00  INFO 23768 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T15:36:12.786+09:00  WARN 23768 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T15:36:12.924+09:00  INFO 23768 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T15:36:13.114+09:00  INFO 23768 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T15:36:13.146+09:00  INFO 23768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T15:36:13.157+09:00  INFO 23768 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.038 seconds (process running for 4.492)
-2023-10-20T15:36:16.298+09:00  INFO 23768 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-20T15:36:16.298+09:00  INFO 23768 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-20T15:36:16.299+09:00  INFO 23768 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-10-20T15:38:24.342+09:00  INFO 17480 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 17480 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T15:38:24.343+09:00  INFO 17480 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T15:38:24.391+09:00  INFO 17480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T15:38:24.391+09:00  INFO 17480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T15:38:24.990+09:00  INFO 17480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T15:38:25.052+09:00  INFO 17480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
-2023-10-20T15:38:25.796+09:00  INFO 17480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T15:38:25.797+09:00  INFO 17480 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T15:38:25.797+09:00  INFO 17480 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T15:38:25.799+09:00  INFO 17480 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T15:38:25.809+09:00  INFO 17480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T15:38:25.810+09:00  INFO 17480 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T15:38:25.878+09:00  INFO 17480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T15:38:25.879+09:00  INFO 17480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1487 ms
-2023-10-20T15:38:25.906+09:00  INFO 17480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T15:38:25.986+09:00  INFO 17480 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T15:38:25.988+09:00  INFO 17480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T15:38:25.998+09:00  INFO 17480 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T15:38:26.139+09:00  INFO 17480 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T15:38:26.192+09:00  INFO 17480 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T15:38:26.195+09:00  INFO 17480 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T15:38:26.329+09:00  INFO 17480 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:38:26.468+09:00  INFO 17480 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T15:38:26.694+09:00  INFO 17480 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:38:27.204+09:00  INFO 17480 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T15:38:27.207+09:00  INFO 17480 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T15:38:27.497+09:00  WARN 17480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T15:38:27.639+09:00  INFO 17480 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T15:38:27.823+09:00  INFO 17480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T15:38:27.856+09:00  INFO 17480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T15:38:27.865+09:00  INFO 17480 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 3.985 seconds (process running for 4.443)
-2023-10-20T15:49:58.918+09:00  INFO 17480 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-20T15:49:58.919+09:00  INFO 17480 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-20T15:49:58.920+09:00  INFO 17480 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-10-20T15:50:58.327+09:00  INFO 24616 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 24616 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\build\classes\java\main started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
-2023-10-20T15:50:58.329+09:00  INFO 24616 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
-2023-10-20T15:50:58.380+09:00  INFO 24616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-20T15:50:58.380+09:00  INFO 24616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-20T15:50:59.026+09:00  INFO 24616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-20T15:50:59.093+09:00  INFO 24616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
-2023-10-20T15:50:59.883+09:00  INFO 24616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7080 (http)
-2023-10-20T15:50:59.884+09:00  INFO 24616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-10-20T15:50:59.885+09:00  INFO 24616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
-2023-10-20T15:50:59.888+09:00  INFO 24616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
-2023-10-20T15:50:59.897+09:00  INFO 24616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-20T15:50:59.897+09:00  INFO 24616 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-20T15:50:59.966+09:00  INFO 24616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-20T15:50:59.966+09:00  INFO 24616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1585 ms
-2023-10-20T15:50:59.994+09:00  INFO 24616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-20T15:51:00.083+09:00  INFO 24616 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
-2023-10-20T15:51:00.085+09:00  INFO 24616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-20T15:51:00.096+09:00  INFO 24616 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/itemBox'
-2023-10-20T15:51:00.242+09:00  INFO 24616 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-20T15:51:00.297+09:00  INFO 24616 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-20T15:51:00.299+09:00  INFO 24616 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-20T15:51:00.442+09:00  INFO 24616 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:51:00.587+09:00  INFO 24616 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-20T15:51:00.801+09:00  INFO 24616 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-20T15:51:01.379+09:00  INFO 24616 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-20T15:51:01.382+09:00  INFO 24616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-20T15:51:01.672+09:00  WARN 24616 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-20T15:51:01.812+09:00  INFO 24616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-20T15:51:02.020+09:00  INFO 24616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-20T15:51:02.052+09:00  INFO 24616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7080 (http) with context path ''
-2023-10-20T15:51:02.062+09:00  INFO 24616 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 4.272 seconds (process running for 4.778)
-2023-10-20T15:51:04.609+09:00  INFO 24616 --- [http-nio-7080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-20T15:51:04.609+09:00  INFO 24616 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-20T15:51:04.610+09:00  INFO 24616 --- [http-nio-7080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-22T19:36:34.521+09:00  INFO 2196 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 2196 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:36:34.533+09:00  INFO 2196 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:36:37.216+09:00  INFO 2196 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:36:37.440+09:00  INFO 2196 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:36:37.441+09:00  INFO 2196 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:36:37.443+09:00  INFO 2196 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-22T19:36:37.484+09:00  INFO 2196 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 3.556 seconds (process running for 4.923)
+2023-10-22T19:39:23.374+09:00  INFO 16628 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 16628 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:39:23.377+09:00  INFO 16628 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:39:25.986+09:00  INFO 16628 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:39:26.185+09:00  INFO 16628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:39:26.185+09:00  INFO 16628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:39:26.187+09:00  INFO 16628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-22T19:39:26.232+09:00  INFO 16628 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 3.621 seconds (process running for 5.235)
+2023-10-22T19:39:44.996+09:00  INFO 6572 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 6572 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:39:44.998+09:00  INFO 6572 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:39:48.157+09:00  INFO 6572 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:39:48.411+09:00  INFO 6572 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:39:48.411+09:00  INFO 6572 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:39:48.413+09:00  INFO 6572 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-22T19:39:48.457+09:00  INFO 6572 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 4.201 seconds (process running for 5.775)
+2023-10-22T19:40:08.828+09:00  INFO 18040 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 18040 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:40:08.830+09:00  INFO 18040 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:40:11.545+09:00  INFO 18040 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:40:11.739+09:00  INFO 18040 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:40:11.739+09:00  INFO 18040 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:40:11.741+09:00  INFO 18040 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-22T19:40:11.789+09:00  INFO 18040 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 3.71 seconds (process running for 5.348)
+2023-10-22T19:41:19.738+09:00  INFO 27564 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 27564 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:41:19.740+09:00  INFO 27564 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:41:22.829+09:00  INFO 27564 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:41:23.031+09:00  INFO 27564 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:41:23.032+09:00  INFO 27564 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:41:23.034+09:00  INFO 27564 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-22T19:41:23.072+09:00  INFO 27564 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 4.049 seconds (process running for 5.664)
+2023-10-22T19:41:50.588+09:00  INFO 292 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 292 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:41:50.591+09:00  INFO 292 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:41:53.352+09:00  INFO 292 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:41:53.563+09:00  INFO 292 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:41:53.564+09:00  INFO 292 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:41:53.565+09:00  INFO 292 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-22T19:41:53.606+09:00  INFO 292 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 3.743 seconds (process running for 5.292)
+2023-10-22T19:43:55.491+09:00  INFO 20748 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 20748 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:43:55.493+09:00  INFO 20748 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:43:58.505+09:00  INFO 20748 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:43:58.760+09:00  INFO 20748 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:43:58.761+09:00  INFO 20748 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:43:58.763+09:00  INFO 20748 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-22T19:43:58.805+09:00  INFO 20748 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 4.017 seconds (process running for 5.631)
+2023-10-22T19:45:05.126+09:00  INFO 23456 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 23456 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:45:05.128+09:00  INFO 23456 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:45:08.092+09:00  INFO 23456 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:45:08.298+09:00  INFO 23456 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:45:08.300+09:00  INFO 23456 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:45:08.302+09:00  INFO 23456 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-22T19:45:08.346+09:00  INFO 23456 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 3.936 seconds (process running for 5.536)
+2023-10-22T19:45:22.180+09:00  INFO 20420 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 20420 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:45:22.182+09:00  INFO 20420 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:45:24.684+09:00  INFO 20420 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:45:24.880+09:00  INFO 20420 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:45:24.881+09:00  INFO 20420 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:45:24.882+09:00  INFO 20420 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-22T19:45:24.930+09:00  INFO 20420 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 3.44 seconds (process running for 5.037)
+2023-10-22T19:45:25.062+09:00  WARN 20420 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2023-10-22T19:45:52.346+09:00  INFO 10892 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 10892 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:45:52.350+09:00  INFO 10892 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:45:55.584+09:00  INFO 10892 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:45:55.841+09:00  INFO 10892 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:45:55.842+09:00  INFO 10892 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:45:55.844+09:00  INFO 10892 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-22T19:45:55.884+09:00  INFO 10892 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 4.314 seconds (process running for 5.992)
+2023-10-22T19:46:12.679+09:00  INFO 4708 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 4708 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:46:12.680+09:00  INFO 4708 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:46:15.165+09:00  INFO 4708 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T19:46:15.375+09:00  INFO 4708 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-22T19:46:15.376+09:00  INFO 4708 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-22T19:46:15.377+09:00  INFO 4708 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-22T19:46:15.415+09:00  INFO 4708 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 3.458 seconds (process running for 5.033)
+2023-10-22T19:52:12.567+09:00  INFO 25864 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 25864 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:52:12.570+09:00  INFO 25864 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:52:13.526+09:00  WARN 25864 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesController' defined in file [C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\out\production\classes\store\han\itemBox\controller\QuotesController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'store.han.itemBox.service.QuotesService': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-22T19:52:13.535+09:00  INFO 25864 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-22T19:52:13.570+09:00 ERROR 25864 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in store.han.itemBox.service.QuotesService required a bean of type 'store.han.itemBox.repository.QuotesRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'store.han.itemBox.repository.QuotesRepository' in your configuration.
+
+2023-10-22T19:52:13.579+09:00 ERROR 25864 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [store.han.itemBox.test.TestLifeCycle@30364216]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@2a3194c6 testClass = store.han.itemBox.test.TestLifeCycle, locations = [], classes = [store.han.itemBox.ItemBoxApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7bab3f1a, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@89cd1bef, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@37389687, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@5d0bf09b, [ImportsContextCustomizer@2819c460 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, store.han.itemBox.service.QuotesService]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@183ec003, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@451001e5, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@d6fedaab], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesController' defined in file [C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\out\production\classes\store\han\itemBox\controller\QuotesController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'store.han.itemBox.service.QuotesService': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.0.12.jar:6.0.12]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.0.12.jar:6.0.12]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1409) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:187) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:119) ~[spring-test-6.0.12.jar:6.0.12]
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'store.han.itemBox.service.QuotesService': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:910) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 96 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:910) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 110 common frames omitted
+
+2023-10-22T19:53:59.650+09:00  INFO 25276 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 25276 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:53:59.654+09:00  INFO 25276 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:53:59.887+09:00  WARN 25276 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesService': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-22T19:53:59.966+09:00 ERROR 25276 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in store.han.itemBox.service.QuotesService required a bean of type 'store.han.itemBox.repository.QuotesRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'store.han.itemBox.repository.QuotesRepository' in your configuration.
+
+2023-10-22T19:53:59.976+09:00 ERROR 25276 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [store.han.itemBox.test.TestLifeCycle@7051777c]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@703feacd testClass = store.han.itemBox.test.TestLifeCycle, locations = [], classes = [store.han.itemBox.service.QuotesService], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@2b91004a, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7205765b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3f6b0be5, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@74751b3, org.springframework.boot.test.context.SpringBootTestAnnotation@8b38c476], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesService': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.0.12.jar:6.0.12]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.0.12.jar:6.0.12]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1409) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:187) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:119) ~[spring-test-6.0.12.jar:6.0.12]
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:910) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 96 common frames omitted
+
+2023-10-22T19:54:23.197+09:00  INFO 7596 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 7596 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:54:23.199+09:00  INFO 7596 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:54:23.441+09:00  WARN 7596 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesService': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-22T19:54:23.545+09:00 ERROR 7596 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in store.han.itemBox.service.QuotesService required a bean of type 'store.han.itemBox.repository.QuotesRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'store.han.itemBox.repository.QuotesRepository' in your configuration.
+
+2023-10-22T19:54:23.552+09:00 ERROR 7596 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [store.han.itemBox.test.TestLifeCycle@7051777c]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@703feacd testClass = store.han.itemBox.test.TestLifeCycle, locations = [], classes = [store.han.itemBox.service.QuotesService], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@2b91004a, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7205765b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3f6b0be5, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@74751b3, org.springframework.boot.test.context.SpringBootTestAnnotation@8b38c476], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesService': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.12.jar:6.0.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.0.12.jar:6.0.12]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.0.12.jar:6.0.12]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1409) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.1.4.jar:3.1.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:187) ~[spring-test-6.0.12.jar:6.0.12]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:119) ~[spring-test-6.0.12.jar:6.0.12]
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'store.han.itemBox.repository.QuotesRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:910) ~[spring-beans-6.0.12.jar:6.0.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-6.0.12.jar:6.0.12]
+	... 96 common frames omitted
+
+2023-10-22T19:55:32.345+09:00  INFO 6936 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 6936 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:55:32.348+09:00  INFO 6936 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:55:34.181+09:00  INFO 6936 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 2.485 seconds (process running for 4.009)
+2023-10-22T19:56:09.601+09:00  INFO 6324 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 6324 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:56:09.604+09:00  INFO 6324 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:56:11.203+09:00  INFO 6324 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 2.271 seconds (process running for 3.818)
+2023-10-22T19:56:25.329+09:00  INFO 11884 --- [main] store.han.itemBox.test.TestLifeCycle     : Starting TestLifeCycle using Java 17.0.8 with PID 11884 (started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:56:25.332+09:00  INFO 11884 --- [main] store.han.itemBox.test.TestLifeCycle     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:56:27.103+09:00  INFO 11884 --- [main] store.han.itemBox.test.TestLifeCycle     : Started TestLifeCycle in 2.457 seconds (process running for 3.963)
+2023-10-22T19:57:50.976+09:00  INFO 27280 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Starting ItemBoxApplication using Java 17.0.8 with PID 27280 (C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox\out\production\classes started by jun in C:\Users\jun\OneDrive\바탕 화면\study\itemBox\itemBox)
+2023-10-22T19:57:50.978+09:00  INFO 27280 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : The following 2 profiles are active: "local", "db_local"
+2023-10-22T19:57:51.058+09:00  INFO 27280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-22T19:57:51.897+09:00  INFO 27280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-22T19:57:52.020+09:00  INFO 27280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 1 JPA repository interfaces.
+2023-10-22T19:57:52.605+09:00  INFO 27280 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-22T19:57:52.721+09:00  INFO 27280 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-22T19:57:52.725+09:00  INFO 27280 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-22T19:57:53.319+09:00  INFO 27280 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-22T19:57:53.538+09:00  INFO 27280 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-22T19:57:53.567+09:00  INFO 27280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-22T19:57:53.701+09:00  INFO 27280 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/itemBox user=SA
+2023-10-22T19:57:53.704+09:00  INFO 27280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-22T19:57:54.091+09:00  INFO 27280 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-22T19:57:55.086+09:00  INFO 27280 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-22T19:57:55.089+09:00  INFO 27280 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22T19:57:55.814+09:00  INFO 27280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-22T19:57:55.839+09:00  INFO 27280 --- [restartedMain] store.han.itemBox.ItemBoxApplication     : Started ItemBoxApplication in 5.776 seconds (process running for 6.692)
+2023-10-22T19:57:55.847+09:00  INFO 27280 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22T19:57:55.852+09:00  INFO 27280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-22T19:57:55.869+09:00  INFO 27280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -3,6 +3,8 @@
 테스트실행에러
 case : 테스트 클래스 경로 인식 실패 문제
 ->     build.gradle 파일에 맨 마지막 단락 task.build("test") -> test {} 변경
+case : gradle로 build 시 gradle 버전 차이
+->
 
 인텔리제이 실행에러
 case : Process finished with exit code 0
