@@ -8,9 +8,9 @@ import store.han.itemBox.entity.LocalFood;
 import java.util.List;
 
 public interface LocalFoodRepository extends JpaRepository<LocalFood, Long> {
-    @Query("select distinct f.region region from LocalFood f")
+    @Query("select distinct f.region from LocalFood f")
     List<String> findRegionsDistinct();
-    @Query("select f.food food from LocalFood f where f.region = :region")
+    @Query("select f.food from LocalFood f where f.region = :region")
     List<String> findFoodsByRegion(String region);
 
 }

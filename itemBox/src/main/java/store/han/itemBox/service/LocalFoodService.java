@@ -22,6 +22,9 @@ public class LocalFoodService {
     public List<LocalFood> findAll(){
         return localFoodRepository.findAll();
     }
+    public List<String> findFoodByRegion(String region){
+        return localFoodRepository.findFoodsByRegion(region);
+    }
 
     public List<String> findRegions() {
         return localFoodRepository.findRegionsDistinct();

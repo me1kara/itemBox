@@ -3,7 +3,7 @@
   lang="ko"
   xmlns:th="http://www.thymeleaf.org"
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorate="fragment/_layout"
+  layout:decorate="~{fragment/_layout}"
 >
   <head>
     <meta charset="UTF-8" />
@@ -20,17 +20,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>아이템박스</title>
-    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
     <style>
       .api-wrap {
         margin: 0 auto;
-      }
-      .quotes-text {
         text-align: center;
       }
-      #quotes-btn {
-        display: inline-block;
-        margin: 0 auto;
+
+      .quotes-wrap {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .btn-wrap {
+        margin-top: 20px;
+      }
+
+      .title-wrap {
+        background-color: var("--gray-area");
+        border-radius: 0.5em;
+        padding: 10px 0;
       }
     </style>
   </head>
@@ -40,36 +51,38 @@
       <section class="api-wrap">
         <div class="title-wrap">
           <h4 class="api-title">랜덤 명언</h4>
-          <pre class="api-info">
-            방황하는 당신을 위한 누군가의 발자취
-            때때로 발자국은 다른 사람의 이정표가 됩니다.
-          </pre>
+          <sub class="api-info">
+            방황하는 당신을 위한 누군가의 발자취. 때때로 발자국은 다른 사람의
+            이정표가 됩니다.
+          </sub>
         </div>
         <div class="quotes-wrap">
-          <p class="quotes-text" th:text="${quotes.text}">
+          <q class="quotes-text" th:text="${quotes.text}">
             삶은 죽음으로 시작하여 죽음으로 끝난다.당신의 삶은 가치가있다.
-          </p>
-          <button id="quotes-btn" class="btn btn-sm btn-secondary">
-            Click
-          </button>
+          </q>
+          <div class="btn-wrap">
+            <button id="quotes-btn" class="btn btn-sm btn-secondary">
+              바꾸기!
+            </button>
+          </div>
         </div>
       </section>
-    </main>
-    <script>
-      const quotes = $(".quotes-text");
-      $("#quotes-btn").click(() => {
-        $.ajax({
-          url: "/quotes/random",
-          method: "post",
-          success: function (response) {
-            quotes.text(response.text);
-          },
-          error: (error) => {
-            console.log(error);
-            alert("이상발생");
-          },
+      <script>
+        const quotes = $(".quotes-text");
+        $("#quotes-btn").click(() => {
+          $.ajax({
+            url: "/quotes/random",
+            method: "post",
+            success: function (response) {
+              quotes.text(response.text);
+            },
+            error: (error) => {
+              console.log(error);
+              alert("이상발생");
+            },
+          });
         });
-      });
-    </script>
+      </script>
+    </main>
   </body>
 </html>

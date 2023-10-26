@@ -3,7 +3,7 @@
   lang="ko"
   xmlns:th="http://www.thymeleaf.org"
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorate="fragment/_layout"
+  layout:decorate="~{fragment/_layout}"
 >
   <head>
     <meta charset="UTF-8" />
@@ -19,25 +19,163 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+    <style>
+      main {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .left-side,
+      .right-side {
+        width: 200px;
+        padding-left: 40px;
+        padding-top: 50px;
+      }
+
+      .main-content {
+        margin: 0 auto;
+        width: 500px;
+        position: relative;
+        top: 50px;
+        text-align: center;
+      }
+
+      .regions {
+        width: 200px;
+        max-height: 500px;
+        overflow: auto;
+      }
+      .regions::-webkit-scrollbar {
+        width: 10px;
+      }
+      .regions::-webkit-scrollbar-thumb {
+        background-color: #2f3542;
+        border-radius: 10px;
+      }
+      .regions::-webkit-scrollbar-track {
+        background-color: grey;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 5px white;
+      }
+
+      .region-item {
+        width: 40%;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0;
+      }
+      .region-link {
+        font-size: 12px;
+        border-radius: 0.5em;
+      }
+
+      .food-title {
+        padding: 10px 0;
+      }
+      .local-foods {
+        display: flex;
+        max-width: 600px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .local-food {
+        font-size: 14px;
+        width: 30%;
+      }
+
+      .select-wrap {
+        text-align: center;
+      }
+
+      .active {
+        background-color: var(--blue-select);
+        color: var(--white-default);
+      }
+      .food-anime {
+        background-color: var(--blue-select);
+        color: var(--white-default);
+        border-radius: 0.5em;
+      }
+      .food-selected {
+        background-color: var(--blue-select);
+        color: var(--white-default);
+        border-radius: 0.5em;
+      }
+    </style>
     <title>아이템박스</title>
   </head>
   <body>
-    <div layout:fragment="content">
-      <section th:if="${localFoods}">
-        <div class="regions">
-          <button th:each="region : ${regions}" th:text="${region}"></button>
-        </div>
-        <table class="local-foods">
-          <tr>
-            <th>region</th>
-            <th>food</th>
-          </tr>
-          <tr th:each="food:${localFoods}">
-            <td th:text="${food.region}"></td>
-            <td th:text="${food.food}"></td>
-          </tr>
-        </table>
+    <main layout:fragment="content">
+      <aside class="left-side">
+        <nav class="regions">
+          <p class="region-item" th:each="region : ${regions}">
+            <a
+              class="region-link"
+              th:href="@{/map/food/{region}(region=${region})}"
+              th:text="${region}"
+              >국가목록</a
+            >
+          </p>
+        </nav>
+      </aside>
+      <section class="main-content">
+        <th:block th:if="${localFoods}">
+          <p class="food-title">
+            <strong th:text="${region}">국가</strong>의 전통음식입니다!
+          </p>
+          <ul class="local-foods">
+            <li th:each="food:${localFoods}" class="local-food">
+              <span class="food" th:text="${food}"> 음식1 </span>
+            </li>
+          </ul>
+          <p class="select-wrap">
+            <button id="select-random" class="btn btn-sm">Click!!</button>
+          </p>
+        </th:block>
       </section>
-    </div>
+      <aside class="right-side"></aside>
+      <script>
+        const region_links = document.querySelectorAll(".region-link");
+        const local_foods = document.querySelectorAll(".food");
+        const food_length = local_foods.length;
+        const time_count = 2000 / food_length;
+
+        region_links.forEach((link) => {
+          if (link.href === window.location.href) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+          }
+        });
+        $("#select-random").click(() => {
+          select_food();
+        });
+        function select_food() {
+          let random = Math.floor(Math.random() * food_length);
+          local_foods.forEach((food) => {
+            food.classList.remove("food-selected");
+          });
+
+          function animateFoods(index, callback) {
+            if (index < local_foods.length) {
+              local_foods[index].classList.add("food-anime");
+              setTimeout(() => {
+                local_foods[index].classList.remove("food-anime");
+                animateFoods(index + 1, callback);
+              }, time_count);
+            } else {
+              callback();
+            }
+          }
+          animateFoods(0, function () {
+            local_foods[random].classList.add("food-selected");
+          });
+        }
+      </script>
+    </main>
   </body>
 </html>

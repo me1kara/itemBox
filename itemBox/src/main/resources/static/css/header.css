@@ -8,6 +8,8 @@
 /* left title */
 .header-title {
   margin-left: 32px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 .header-title > h4 > strong {
   font-weight: 900;
@@ -33,22 +35,31 @@
   display: none;
 }
 
-#header-checkbox:checked + #header-menu {
-  display: block;
-  position: absolute;
-  top: 100px;
-  z-index: 1px;
-  border-left: 2px solid black;
-}
-
 #header-menu {
-  display: none;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+  position: fixed;
+  top: 0;
+  right: -360px;
   width: 360px;
   height: 100%;
+  z-index: 1px;
   background-color: var(--gray-background);
+  border-left: 2px solid black;
+  transition: 0.5s;
+  text-align: right;
+}
+
+#header-menu > label {
+  background-image: url("https://img.icons8.com/ios-filled/50/delete-sign--v1.png");
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+}
+
+.items-wrap {
+  position: relative;
+  top: -7px;
 }
 
 .items-wrap > p {
@@ -82,6 +93,11 @@ a.link-item {
   display: inline-block;
   width: 100%;
   text-align: left;
+}
+
+.items > li {
+  padding-left: 10px;
+  list-style-type: none;
 }
 
 .items > li:hover {

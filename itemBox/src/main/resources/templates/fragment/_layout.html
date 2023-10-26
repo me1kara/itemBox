@@ -3,7 +3,6 @@
   lang="ko"
   xmlns:th="http://www.thymeleaf.org"
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 >
   <head>
     <meta charset="UTF-8" />
@@ -22,24 +21,12 @@
     <link rel="stylesheet" th:href="@{/css/footer.css}" />
     <link rel="stylesheet" th:href="@{/css/home.css}" />
     <title>Document</title>
-
-    <!--
-    <script>
-        $(document).ready(function() {
-          $('#toggle-btn').click(function() {
-            $('#navbarNav').toggle();
-          });
-          let urlName = window.location.pathname.split('/')[1];
-          $('#' + urlName).css('color', 'blue');
-        });
-    </script>
-    -->
   </head>
   <body>
-    <div th:replace="~{fragment/header :: header()}"></div>
+    <div th:replace="~{fragment/header :: header}"></div>
     <div layout:fragment="content">
       <p>change</p>
     </div>
-    <div th:replace="~{fragment/footer :: footer()}"></div>
+    <div th:replace="~{fragment/footer :: footer}"></div>
   </body>
 </html>

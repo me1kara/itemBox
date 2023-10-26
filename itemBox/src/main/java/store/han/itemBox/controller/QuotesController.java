@@ -28,11 +28,12 @@ public class QuotesController {
         model.addAttribute("quotes",quotes);
         return "/quotes/random";
     }
+    @PostMapping("/random")
 
     @ResponseBody
-    @PostMapping("/random")
     public ResponseEntity<Quotes> random(){
         Quotes quotes = quotesService.findRandom();
+
         return ResponseEntity.ok(quotes);
     }
 

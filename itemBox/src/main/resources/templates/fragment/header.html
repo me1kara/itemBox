@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html
-  lang="ko"
-  xmlns:th="http://www.thymeleaf.org"
->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <title>쇼핑몰</title>
@@ -13,52 +10,66 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="../../static/css/header.css" />
   </head>
   <body>
     <header th:fragment="header()">
       <div class="header-d">
         <div class="header-title">
-          <h4><strong>아이템박스!</strong></h4>
+          <h4>
+            <a th:href="@{/}"><strong>아이템박스!</strong></a>
+          </h4>
         </div>
         <div class="header-menu-wrap">
-          <div>
+          <div style="display: inline-block">
             <label id="menu-toggle" for="header-checkbox"></label>
           </div>
           <input type="checkbox" id="header-checkbox" />
-          <nav class="header-menu" id="header-menu" name="header-menu">
-            <article class="items-wrap" style="border: none">
-              <p class="items-cate" style="border-top: none">
-                <span></span><span>맵</span>
-              </p>
-              <ul class="items">
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-              </ul>
-            </article>
-            <article class="items-wrap">
-              <p class="items-cate"><span></span><span>맵</span></p>
-              <ul class="items">
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-              </ul>
-            </article>
-            <article class="items-wrap">
-              <p class="items-cate"><span></span><span>맵</span></p>
-              <ul class="items">
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-                <li><a href="" class="link-item">1</a></li>
-              </ul>
-            </article>
-          </nav>
         </div>
       </div>
       <div class="header-m"></div>
+
+      <nav class="header-menu" id="header-menu" name="header-menu">
+        <label for="header-checkbox"></label>
+        <article class="items-wrap">
+          <p class="items-cate"><span></span><span>맵</span></p>
+          <ul class="items list-group">
+            <li>
+              <a
+                th:href="@{/map/food/{region}(region='서울')}"
+                class="nav-link link-item"
+                >지역음식</a
+              >
+            </li>
+          </ul>
+        </article>
+        <article class="items-wrap">
+          <p class="items-cate"><span></span><span>AI</span></p>
+          <ul class="items list-group">
+            <li>
+              <a href="" class="nav-link link-item">-</a>
+            </li>
+          </ul>
+        </article>
+        <article class="items-wrap">
+          <p class="items-cate"><span></span><span>DATA</span></p>
+          <ul class="items list-group">
+            <li>
+              <a href="" class="nav-link link-item">-</a>
+            </li>
+          </ul>
+        </article>
+        <article class="items-wrap">
+          <p class="items-cate"><span></span><span>유희거리</span></p>
+          <ul class="items list-group">
+            <li>
+              <a th:href="@{/quotes/random}" class="nav-link link-item"
+                >랜덤명언</a
+              >
+            </li>
+          </ul>
+        </article>
+      </nav>
 
       <script>
         const checkbox = document.getElementById("header-checkbox");
@@ -71,14 +82,13 @@
         checkbox.addEventListener("change", function () {
           if (checkbox.checked) {
             // 체크박스가 선택되면 이미지를 변경
-            $(".header-menu-wrap").css("border-left", "2px solid black");
-            image_label.style.backgroundImage =
-              "url('https://img.icons8.com/ios-filled/50/delete-sign--v1.png')";
+            header_menu.style.right = "0";
+            image_label.style.display = "none";
           } else {
-            // 체크박스가 선택 해제되면 이미지를 다시 원래 이미지로 변경
-            $(".header-menu-wrap").css("border-left", "none");
-            image_label.style.backgroundImage =
-              "url('https://img.icons8.com/ios/50/menu--v7.png')";
+            header_menu.style.right = "-360px";
+            setTimeout(() => {
+              image_label.style.display = "block";
+            }, 500);
           }
         });
       </script>

@@ -58,10 +58,11 @@ def get_local_food(local_ul,local_titles,n) :
                 #요소에서 텍스트를 추출하고 정규식으로 정형화함
                 food = sl.find('div',class_='hQuAzr23').get_text(strip=True)
                 text1 = re.sub(r'\[\d+\]', '', food)
+                title1 = re.sub(r'\[\d+\]','',a_title)
                 if ':' in text1 :
-                    result.append([a_title, text1.split(':')[0]])
+                    result.append([title1, text1.split(':')[0]])
                 else : 
-                    result.append([a_title,text1])
+                    result.append([title1,text1])
 #             result[a_title] = foods
 
 def get_jeju_food(local_ul) :

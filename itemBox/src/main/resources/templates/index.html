@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<html
-  lang="ko"
-  xmlns:th="http://www.thymeleaf.org"
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
->
-  <!-- layout:decorate="fragment/_layout" -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -23,6 +18,9 @@
     <title>아이템박스</title>
 
     <style>
+      main {
+        height: 700px;
+      }
       .mainLogo-wrap {
         padding-left: 20px;
         padding-top: 20px;
@@ -72,13 +70,15 @@
         width: 80px;
         height: 82px;
         border-right: 2px solid black;
+        text-align: center;
       }
+
       .item-none:after {
         position: absolute;
         content: "";
         border-top: 2px solid black;
         width: 100px;
-        transform: translateX(76px) rotate(135deg);
+        transform: translateX(36px) rotate(135deg);
         transform-origin: 0% 0%;
         margin-top: 7px;
       }
@@ -88,6 +88,10 @@
       footer {
         text-align: center;
         font-size: 12px;
+      }
+      .api-image {
+        display: block;
+        margin: 0 auto;
       }
     </style>
   </head>
@@ -115,9 +119,15 @@
             <p class="item-cate"><span></span><span>맵</span></p>
             <ul class="items">
               <li class="item">
-                <a th:href="@{/map/localFoods}">
-                  <img src="" alt="api-image" />
-                  <span>지역전통음식리스트</span>
+                <a th:href="@{/map/food/{region}(region='서울')}">
+                  <img
+                    width="50"
+                    height="50"
+                    src="https://img.icons8.com/ios-filled/50/food.png"
+                    alt="food"
+                    class="api-image"
+                  />
+                  <span>지역전통음식</span>
                 </a>
               </li>
               <li class="item-none"></li>
@@ -167,7 +177,13 @@
             <ul class="items">
               <li class="item">
                 <a th:href="@{/quotes/random}">
-                  <img src="" alt="api-image" />
+                  <img
+                    width="50"
+                    height="50"
+                    src="https://img.icons8.com/ios-filled/50/quote.png"
+                    alt="quote"
+                    class="api-image"
+                  />
                   <span>랜덤명언</span>
                 </a>
               </li>
