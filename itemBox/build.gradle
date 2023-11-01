@@ -39,6 +39,9 @@ dependencies {
 //	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+	//json
+	implementation group: 'org.json', name: 'json', version: '20230618'
 }
 
 test {

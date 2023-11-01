@@ -1,7 +1,7 @@
 /* css 변수선언 */
 :root {
   --gray-background: #ece8e2;
-  --gray-area: #696969;
+  --gray-area: rgba(0, 0, 0, 0.5);
   --gray-button: #888888;
   --black-default: #222222;
   --white-default: #ffffff;

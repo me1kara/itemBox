@@ -26,8 +26,8 @@ public class MapController {
     @GetMapping(value={"/food/{region}","/food"})
     public String specialties(@PathVariable(required = false, value = "region") String region, Model model) {
         if(region==null){
-        }
             region = "서울";
+        }
         List<String> localFoods = localFoodService.findFoodByRegion(region);
         if (!localFoods.isEmpty()) {
             model.addAttribute("localFoods", localFoods);

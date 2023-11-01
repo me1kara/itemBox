@@ -29,63 +29,65 @@
       </div>
       <div class="header-m"></div>
 
-      <nav class="header-menu" id="header-menu" name="header-menu">
-        <label for="header-checkbox"></label>
-        <article class="items-wrap">
-          <p class="items-cate"><span></span><span>맵</span></p>
-          <ul class="items list-group">
-            <li>
-              <a
-                th:href="@{/map/food/{region}(region='서울')}"
-                class="nav-link link-item"
-                >지역음식</a
-              >
-            </li>
-          </ul>
-        </article>
-        <article class="items-wrap">
-          <p class="items-cate"><span></span><span>AI</span></p>
-          <ul class="items list-group">
-            <li>
-              <a href="" class="nav-link link-item">-</a>
-            </li>
-          </ul>
-        </article>
-        <article class="items-wrap">
-          <p class="items-cate"><span></span><span>DATA</span></p>
-          <ul class="items list-group">
-            <li>
-              <a href="" class="nav-link link-item">-</a>
-            </li>
-          </ul>
-        </article>
-        <article class="items-wrap">
-          <p class="items-cate"><span></span><span>유희거리</span></p>
-          <ul class="items list-group">
-            <li>
-              <a th:href="@{/quotes/random}" class="nav-link link-item"
-                >랜덤명언</a
-              >
-            </li>
-          </ul>
-        </article>
-      </nav>
+      <div class="overlay" id="header-overlay">
+        <nav class="header-menu" id="header-menu" name="header-menu">
+          <label for="header-checkbox"></label>
+          <article class="items-wrap">
+            <p class="items-cate"><span></span><span>맵</span></p>
+            <ul class="items list-group">
+              <li>
+                <a
+                  th:href="@{/map/food/{region}(region='서울')}"
+                  class="nav-link link-item"
+                  >지역음식</a
+                >
+              </li>
+            </ul>
+          </article>
+          <article class="items-wrap">
+            <p class="items-cate"><span></span><span>AI</span></p>
+            <ul class="items list-group">
+              <li>
+                <a href="" class="nav-link link-item">-</a>
+              </li>
+            </ul>
+          </article>
+          <article class="items-wrap">
+            <p class="items-cate"><span></span><span>DATA</span></p>
+            <ul class="items list-group">
+              <li>
+                <a href="" class="nav-link link-item">-</a>
+              </li>
+            </ul>
+          </article>
+          <article class="items-wrap">
+            <p class="items-cate"><span></span><span>유희거리</span></p>
+            <ul class="items list-group">
+              <li>
+                <a th:href="@{/quotes/random}" class="nav-link link-item"
+                  >랜덤명언</a
+                >
+              </li>
+            </ul>
+          </article>
+        </nav>
+      </div>
 
       <script>
         const checkbox = document.getElementById("header-checkbox");
         const image_label = document.querySelector(
           ".header-menu-wrap > div > label"
         );
-        const header_menu = document.getElementById("header-menu");
+        const menu_overlay = document.getElementById("header-overlay");
         const body = document.querySelector("body");
 
         checkbox.addEventListener("change", function () {
           if (checkbox.checked) {
             // 체크박스가 선택되면 이미지를 변경
-            header_menu.style.right = "0";
+            menu_overlay.style.display = "block";
             image_label.style.display = "none";
           } else {
-            header_menu.style.right = "-360px";
+            menu_overlay.style.display = "none";
             setTimeout(() => {
               image_label.style.display = "block";
             }, 500);

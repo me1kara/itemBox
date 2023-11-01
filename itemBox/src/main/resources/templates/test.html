@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="../static/css/header.css" />
+    <link rel="stylesheet" href="../static/css/footer.css" />
+    <link rel="stylesheet" href="../static/css/home.css" />
+
+    <style>
+      main {
+        text-align: center;
+      }
+      .main-content {
+        display: inline-block;
+      }
+      #hourlyWageChart {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body style="background-color: var(--gray-background)">
+    <header id="header"></header>
+    <main class="container">
+      <div class="main-content">
+        <!--  최근 십년 간의 시급들-->
+        <section class="wages">
+          <canvas id="hourlyWageChart" width="400" height="200"></canvas>
+          <p class="currentWage"></p>
+        </section>
+        <section class="calculator">
+          <h1>시급 계산기</h1>
+          <label for="hourlyWage">시급 (원):</label>
+          <input type="number" id="hourlyWage" />
+          <label for="hoursWorked">근무 시간 (시간):</label>
+          <input type="number" id="hoursWorked" />
+          <button id="calculateButton">계산</button>
+          <h2 id="result"></h2>
+        </section>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+      // html 템플릿
+      $(document).ready(function () {
+        $("#header").load("fragment/header.html");
+        $("#footer").load("fragment/footer.html");
+      });
+      //el 변수설정
+      const wagesEL = $(".wages");
+      const ctx = document.getElementById("hourlyWageChart").getContext("2d");
+      //api 통신용변수
+      const url = "http://localhost:7080/data/timeMoney";
+      // 시급 데이터
+      const hourlyWages = [];
+      const years = [];
+
+      get_wages().then((wages) => {
+        for (let i = wages.length - 1; i >= 0; i--) {
+          hourlyWages.push(wages[i].시간급);
+          years.push(wages[i].연도);
+        }
+        let text =
+          wages[0].연도 +
+          "년의 최저시급은 <strong>" +
+          wages[0].시간급 +
+          "</strong>원 입니다.";
+        $(".currentWage").html(text);
+        to_canvasGraph();
+      });
+
+      //이벤트
+      document
+        .getElementById("calculateButton")
+        .addEventListener("click", function () {
+          const hourlyWage = parseFloat(
+            document.getElementById("hourlyWage").value
+          );
+          const hoursWorked = parseFloat(
+            document.getElementById("hoursWorked").value
+          );
+
+          if (!isNaN(hourlyWage) && !isNaN(hoursWorked)) {
+            const totalEarnings = hourlyWage * hoursWorked;
+            document.getElementById(
+              "result"
+            ).textContent = `총 수입: ₩${totalEarnings.toFixed(2)}`;
+          } else {
+            document.getElementById("result").textContent =
+              "올바른 값을 입력하세요.";
+          }
+        });
+
+      //fetch로 백단에 시급 요청 함수
+      async function get_wages() {
+        const res = await fetch(url);
+        return res.json();
+      }
+
+      // Chart.js를 사용하여 시급그래프 생성 함수
+      function to_canvasGraph() {
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: years,
+            datasets: [
+              {
+                label: "연도별 시급",
+                data: hourlyWages,
+                borderColor: "rgba(75, 192, 192, 1)",
+                borderWidth: 2,
+                pointBackgroundColor: "rgba(75, 192, 192, 1)",
+                pointRadius: 5,
+                fill: false,
+              },
+            ],
+          },
+          options: {
+            responsive: false, // 그래프 크기를 고정
+            scales: {
+              y: {
+                beginAtZero: true,
+                suggestedMin: 0,
+                suggestedMax: Math.max(...hourlyWages) + 2,
+              },
+            },
+          },
+        });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
